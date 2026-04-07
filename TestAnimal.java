@@ -11,19 +11,23 @@ public class TestAnimal{
         Animal cow1 = registry.createCow();
         Animal horse1 = registry.createHorse();
 
-        // Demonstrate that clones work
-        System.out.println("\n=== Animal Types and Sounds ===");
-        System.out.print(sheep1.getType() + ": ");
-        sheep1.makeSound();
-        
-        System.out.print(sheep2.getType() + ": ");
-        sheep2.makeSound();
-        
-        System.out.print(cow1.getType() + ": ");
-        cow1.makeSound();
-        
-        System.out.print(horse1.getType() + ": ");
-        horse1.makeSound();
+        ((Sheep) sheep1).setName("Dolly");
+        ((Cow) cow1).setSound("Moo!");
+        ((Horse) horse1).setColor("Black");
+
+        Animal sheep3 = registry.createSheep();
+        ((Sheep) sheep3).setName("Molly");
+
+        System.out.println(sheep1.getType() + " named " + ((Sheep) sheep1).getName());
+        System.out.println(sheep2.getType() + " named " + ((Sheep) sheep2).getName());
+
+        Animal cow2 = registry.createCow();
+        ((Cow) cow2).setFood("Grass");
+        System.out.println(cow2.getType() + " eats " + ((Cow) cow2).getFood());
+
+        Animal horse2 = registry.createHorse();
+        ((Horse) horse2).setColor("Brown");
+        System.out.println(horse2.getType() + " is " + ((Horse) horse2).getColor());
 
         // Verify that sheep1 and sheep2 are different objects
         System.out.println("\n=== Verify Cloning (Different Objects) ===");

@@ -5,7 +5,7 @@ public class Cow implements Animal{
 
     public Cow() {
         this.legs = 4;
-        this.sound = "Moo";
+        this.sound = "Uhmmm";
         this.food = "Space Junk";
     }
 
@@ -40,5 +40,13 @@ public class Cow implements Animal{
 
     public String getFood() {
         return food;
+    }
+
+    public void setSound(String sound) {
+        this.sound = sound;
+    }
+
+    public void setFood(String food) {
+        this.food = food;
     }
 }

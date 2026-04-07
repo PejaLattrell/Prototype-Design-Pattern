@@ -48,4 +48,8 @@ public class Horse implements Animal{
     public String getColor() {
         return color;
     }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
